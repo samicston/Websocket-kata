@@ -1,18 +1,16 @@
-# Angular Kata 1
+# Angular Kata 2
 
-This project represents the working files for angular kata 1.
+This project represents the working files for angular kata 2.
 
 [Code Kata Definition](http://codekata.com/)
 
 Kata:
 
-1. Find a simple way to handle data from a chosen input type (input, radio, select).
+1. Samuel will create a websocket server in which everyone will get connected to.
 
-2. Find a creative (not necessary right) way to do the same thing (1).
+2. One should be able to push a string message to the server and everyone will see it.
 
-3. Find 4 angular ways to do the same thing.
-
-4. Show your muscles with the same functionality
+3. we will get divided into 2 teams inwhich what we write is only availabe to our team.
 
 * please don't prepare and don't exercise before the kata
 
