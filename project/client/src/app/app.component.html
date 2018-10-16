@@ -1,0 +1,14 @@
+<div id="sam-chat">
+  <div id="chat-window">
+      <div id="output"></div>
+      <div id="feedback"></div>
+  </div>
+  <input id="handle" type="text" placeholder="Handle" [(ngModel)]="handle">
+  <input id="message" type="text" placeholder="Message" [(ngModel)]="message" (keyup)="isTyping()">
+  <button id="send" (click)="getTypedMessage()">Send</button>
+</div>
+<div>
+  <input type="text" (keypress)="getPrivateMessage()" [(ngModel)]="privateMessage"/>
+  <div id="private"></div>
+</div>
+
