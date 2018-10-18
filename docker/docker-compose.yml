@@ -1,0 +1,15 @@
+version: '3'
+services:
+  websocketkata:
+    entrypoint: tail -f /dev/null
+    build:
+      context: ..
+      dockerfile: ./docker/node/Dockerfile
+    environment:
+      NODE_ENV: 'qa'
+      APP_NAME: 'websocketkata'
+      APP_PORT: 5000
+      TERM: 'linux'
+    ports:
+      - 8001:5000
+    restart: on-failure
