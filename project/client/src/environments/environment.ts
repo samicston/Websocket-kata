@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ws_url: 'http://dock-qa-se-01:8001'
+  ws_url: 'http://10.49.128.53:8001'
 };
 
 /*
