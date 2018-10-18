@@ -10,7 +10,9 @@ Kata:
 
 2. One should be able to push a string message to the server and everyone will see it.
 
-3. we will get divided into 2 teams inwhich what we write is only availabe to our team.
+3. Each person should try pushing in a string message and see if it will be seen only by him or her.
+
+4. we will get divided into 2 teams inwhich what we write is only availabe to our team.
 
 * please don't prepare and don't exercise before the kata
 
