@@ -12,16 +12,17 @@ export class AppComponent implements OnInit {
   public chat;
   public handle;
   public privateMessage;
+  public groupId;
 
   constructor(private chatService: ChatService){}
 
   getTypedMessage(){
     console.log('kkgkgh', this.message)
-    this.chatService.sendPublicMessage({message: this.message, sender: this.handle});
+    this.chatService.sendPublicMessage({message: this.message, sender: this.handle, group: this.groupId});
   }
 
   isTyping(){
-    this.chatService.showTyping(this.handle);
+    this.chatService.showTyping({sender: this.handle, group: this.groupId});
   }
 
   getPrivateMessage(){
@@ -39,7 +40,8 @@ export class AppComponent implements OnInit {
     })
 
     this.chatService.typing.subscribe(typing => {
-      isTyping.innerHTML = '<p><em>' + typing + ' is typing a message...</em></p>'
+      let userTyping = JSON.parse(typing)
+      isTyping.innerHTML = '<p><em>' + userTyping.sender + ' is typing a message...</em></p>'
     })
 
     this.chatService.privateMessages.subscribe( privatemsg => {

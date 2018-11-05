@@ -5,6 +5,7 @@
   </div>
   <input id="handle" type="text" placeholder="Handle" [(ngModel)]="handle">
   <input id="message" type="text" placeholder="Message" [(ngModel)]="message" (keyup)="isTyping()">
+  <input id="group" type="text" placeholder="Group" [(ngModel)]="groupId">
   <button id="send" (click)="getTypedMessage()">Send</button>
 </div>
 <div>
