@@ -30,19 +30,10 @@ RUN \
 
 USER $NODE_USER
 
-RUN \
-    npm install -g \
-        mocha \
-        typescript \
-        tslint \
-        webpack \
-        @angular/cli@latest \
-        concurrently \
-        pm2 \
-        nodemon
+RUN npm install -g pm2
 
 COPY ./project /opt/websocket-kata
 
 WORKDIR /opt/websocket-kata
 
-ENTRYPOINT  ["/bin/sh", "-c", "pm2 start /opt/websocket-kata/server/app.js"]
+ENTRYPOINT  ["/bin/sh", "-c", "pm2 start /opt/websocket-kata/server/app.js && tail -f /dev/null"]
